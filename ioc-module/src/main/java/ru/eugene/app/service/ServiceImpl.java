@@ -6,10 +6,15 @@ import ru.eugene.app.dao.IDao;
 
 @Component
 public class ServiceImpl implements IService {
-    @Autowired
+
     private IDao dao;
 
-//    public ServiceImpl(IDao dao) {
+    @Autowired
+    public void setDao(IDao dao) {
+        this.dao = dao;
+    }
+
+    //    public ServiceImpl(IDao dao) {
 //        this.dao = dao;
 //    }
 
